@@ -14560,3 +14560,823 @@ x-amzn-requestid: 0a8aa4fffee09b80-00005765-00248189-bd593b378bb5e589-01474d1b-9
 
 00:44:15.285 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
 00:44:17.498 [Thread-13] INFO  com.amazon.alexa.avs.http.AVSClient - HttpClient stopping
+00:58:05.156 [main] INFO  com.amazon.alexa.avs.AVSController - Creating Wake Word IPC | port number: 5123
+00:58:05.369 [Thread-1] INFO  com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - New IPC client was accepted, current of current clients is 1
+00:58:06.185 [main] INFO  com.amazon.alexa.avs.AVSController - Created Wake Word IPC ok.
+00:58:06.197 [main] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_PAUSE_WAKE_WORD_ENGINE to all connected clients
+00:58:06.450 [main] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_RESUME_WAKE_WORD_ENGINE to all connected clients
+00:58:13.221 [main] INFO  com.amazon.alexa.avs.http.AVSClient - HttpClient starting
+00:58:15.564 [main] INFO  com.amazon.alexa.avs.http.AVSClient - HttpClient started
+00:58:18.024 [pool-7-thread-1] DEBUG com.amazon.alexa.avs.NotificationManager - Loaded notification indicator state from disk
+00:58:20.328 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Establishing downchannel
+00:58:22.074 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 200
+00:58:22.076 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 0e1b24fffe290094-000032b1-002126e7-1f861596767bbcb6-57fdf3f2-1
+content-type: multipart/related; boundary=------abcde123; type=application/json
+
+
+00:58:22.080 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.AVSController - Start sending SynchronizeStateEvent
+00:58:23.855 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "System",
+      "name" : "SynchronizeState",
+      "messageId" : "7346666e-de44-40e0-a5ca-b4edaa8d626b"
+    },
+    "payload" : { }
+  },
+  "context" : [ {
+    "header" : {
+      "namespace" : "AudioPlayer",
+      "name" : "PlaybackState"
+    },
+    "payload" : {
+      "token" : "",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "IDLE"
+    }
+  }, {
+    "header" : {
+      "namespace" : "SpeechSynthesizer",
+      "name" : "SpeechState"
+    },
+    "payload" : {
+      "token" : "",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "FINISHED"
+    }
+  }, {
+    "header" : {
+      "namespace" : "Alerts",
+      "name" : "AlertsState"
+    },
+    "payload" : {
+      "allAlerts" : [ ],
+      "activeAlerts" : [ ]
+    }
+  }, {
+    "header" : {
+      "namespace" : "Speaker",
+      "name" : "VolumeState"
+    },
+    "payload" : {
+      "volume" : 50,
+      "muted" : false
+    }
+  }, {
+    "header" : {
+      "namespace" : "Notifications",
+      "name" : "IndicatorState"
+    },
+    "payload" : {
+      "isEnabled" : false,
+      "isVisualIndicatorPersisted" : false
+    }
+  } ]
+}
+00:58:23.934 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "Settings",
+      "name" : "SettingsUpdated",
+      "messageId" : "b032453a-5901-40c0-af19-e5b6ca249aaf"
+    },
+    "payload" : {
+      "settings" : [ {
+        "key" : "locale",
+        "value" : "en-US"
+      } ]
+    }
+  }
+}
+00:58:24.162 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 204
+00:58:24.163 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 0e1b24fffe290094-000032b1-002126e7-1f861596767bbcb6-57fdf3f2-3
+
+
+00:58:24.166 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
+00:58:24.348 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 204
+00:58:24.349 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 0e1b24fffe290094-000032b1-002126e7-1f861596767bbcb6-57fdf3f2-5
+
+
+00:58:24.350 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
+00:59:25.036 [Thread-13] INFO  com.amazon.alexa.avs.http.AVSClient - HttpClient stopping
+00:59:25.045 [Thread-13] INFO  com.amazon.alexa.avs.http.AVSClient - [java.lang.Thread.getStackTrace(Thread.java:1552), com.amazon.alexa.avs.http.AVSClient$1.lifeCycleStopping(AVSClient.java:198), org.eclipse.jetty.util.component.AbstractLifeCycle.setStopping(AbstractLifeCycle.java:197), org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:88), com.amazon.alexa.avs.http.AVSClient.shutdown(AVSClient.java:504), com.amazon.alexa.avs.AVSController$2.run(AVSController.java:205)]
+01:00:17.850 [main] INFO  com.amazon.alexa.avs.AVSController - Creating Wake Word IPC | port number: 5123
+01:00:18.901 [main] INFO  com.amazon.alexa.avs.AVSController - Created Wake Word IPC ok.
+01:00:18.923 [main] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_PAUSE_WAKE_WORD_ENGINE to all connected clients
+01:00:19.152 [main] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_RESUME_WAKE_WORD_ENGINE to all connected clients
+01:00:19.374 [Thread-1] INFO  com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - New IPC client was accepted, current of current clients is 1
+01:00:22.731 [main] INFO  com.amazon.alexa.avs.http.AVSClient - HttpClient starting
+01:00:24.959 [main] INFO  com.amazon.alexa.avs.http.AVSClient - HttpClient started
+01:00:27.316 [pool-7-thread-1] DEBUG com.amazon.alexa.avs.NotificationManager - Loaded notification indicator state from disk
+01:00:29.687 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Establishing downchannel
+01:00:31.572 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 200
+01:00:31.574 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 02363bfffef61422-00000170-0022ad9e-a1d80f706f59b646-8b24b20d-1
+content-type: multipart/related; boundary=------abcde123; type=application/json
+
+
+01:00:31.578 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.AVSController - Start sending SynchronizeStateEvent
+01:00:33.371 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "System",
+      "name" : "SynchronizeState",
+      "messageId" : "ce9b27d7-ed2b-4c70-a3ee-b1e7615b34d5"
+    },
+    "payload" : { }
+  },
+  "context" : [ {
+    "header" : {
+      "namespace" : "AudioPlayer",
+      "name" : "PlaybackState"
+    },
+    "payload" : {
+      "token" : "",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "IDLE"
+    }
+  }, {
+    "header" : {
+      "namespace" : "SpeechSynthesizer",
+      "name" : "SpeechState"
+    },
+    "payload" : {
+      "token" : "",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "FINISHED"
+    }
+  }, {
+    "header" : {
+      "namespace" : "Alerts",
+      "name" : "AlertsState"
+    },
+    "payload" : {
+      "allAlerts" : [ ],
+      "activeAlerts" : [ ]
+    }
+  }, {
+    "header" : {
+      "namespace" : "Speaker",
+      "name" : "VolumeState"
+    },
+    "payload" : {
+      "volume" : 50,
+      "muted" : false
+    }
+  }, {
+    "header" : {
+      "namespace" : "Notifications",
+      "name" : "IndicatorState"
+    },
+    "payload" : {
+      "isEnabled" : false,
+      "isVisualIndicatorPersisted" : false
+    }
+  } ]
+}
+01:00:33.431 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "Settings",
+      "name" : "SettingsUpdated",
+      "messageId" : "6972abb5-f55c-4dc0-9556-02aada6e7306"
+    },
+    "payload" : {
+      "settings" : [ {
+        "key" : "locale",
+        "value" : "en-US"
+      } ]
+    }
+  }
+}
+01:00:34.800 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 204
+01:00:34.812 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 02363bfffef61422-00000170-0022ad9e-a1d80f706f59b646-8b24b20d-3
+
+
+01:00:34.817 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
+01:00:35.002 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 204
+01:00:35.007 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 02363bfffef61422-00000170-0022ad9e-a1d80f706f59b646-8b24b20d-5
+
+
+01:00:35.008 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
+01:01:53.951 [Thread-3] INFO  com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Received wake word detected
+01:01:53.956 [Thread-3] INFO  com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Wake Word Detected ......
+01:01:53.971 [Thread-27] INFO  com.amazon.alexa.avs.ui.controllers.ListenViewController - Wake Word was detected
+01:01:53.972 [Thread-27] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_PAUSE_WAKE_WORD_ENGINE to all connected clients
+01:01:54.110 [Thread-27] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "SpeechRecognizer",
+      "name" : "Recognize",
+      "messageId" : "ed00f08a-a0ac-4a61-ad12-d689f7f4c08b",
+      "dialogRequestId" : "98ad5e39-4450-4517-b85c-ba0373d9b204"
+    },
+    "payload" : {
+      "profile" : "NEAR_FIELD",
+      "format" : "AUDIO_L16_RATE_16000_CHANNELS_1"
+    }
+  },
+  "context" : [ {
+    "header" : {
+      "namespace" : "AudioPlayer",
+      "name" : "PlaybackState"
+    },
+    "payload" : {
+      "token" : "",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "IDLE"
+    }
+  }, {
+    "header" : {
+      "namespace" : "SpeechSynthesizer",
+      "name" : "SpeechState"
+    },
+    "payload" : {
+      "token" : "",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "FINISHED"
+    }
+  }, {
+    "header" : {
+      "namespace" : "Alerts",
+      "name" : "AlertsState"
+    },
+    "payload" : {
+      "allAlerts" : [ ],
+      "activeAlerts" : [ ]
+    }
+  }, {
+    "header" : {
+      "namespace" : "Speaker",
+      "name" : "VolumeState"
+    },
+    "payload" : {
+      "volume" : 50,
+      "muted" : false
+    }
+  } ]
+}
+01:01:54.124 [Thread-27] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Speech request started
+01:01:54.125 [Thread-27] DEBUG com.amazon.alexa.avs.AVSAudioPlayer - Interrupting all Alexa output
+01:01:54.124 [RequestThread] INFO  com.amazon.alexa.avs.http.CachingContentProvider - Create new CachingIterator
+01:01:59.847 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.MessageParser - Response metadata: 
+{
+  "directive" : {
+    "header" : {
+      "namespace" : "SpeechRecognizer",
+      "name" : "StopCapture",
+      "messageId" : "650f100e-3404-464f-9f96-ba39917f0408",
+      "dialogRequestId" : "98ad5e39-4450-4517-b85c-ba0373d9b204"
+    },
+    "payload" : { }
+  }
+}
+01:02:00.022 [DependentDirectiveThread] INFO  com.amazon.alexa.avs.AVSController - Handling directive: SpeechRecognizer.StopCapture
+01:02:00.023 [DependentDirectiveThread] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Dispatching directive
+01:02:00.039 [DependentDirectiveThread] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Finished listening to user speech
+01:02:00.046 [DependentDirectiveThread] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_RESUME_WAKE_WORD_ENGINE to all connected clients
+01:02:00.213 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 204
+01:02:00.215 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 02363bfffef61422-00000170-0022ad9e-a1d80f706f59b646-8b24b20d-7
+
+
+01:02:00.215 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
+01:02:00.216 [RequestThread] DEBUG com.amazon.alexa.avs.AVSController - Speech processing finished. Dependent queue size: 0
+01:02:00.217 [RequestThread] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Finished processing speech request
+01:02:00.232 [Thread-31] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Started resume audio thread
+01:02:00.243 [Thread-31] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Resuming all Alexa output
+01:02:00.245 [Thread-31] DEBUG com.amazon.alexa.avs.AVSAudioPlayer - Resuming all Alexa output
+01:02:02.855 [Thread-3] INFO  com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Received wake word detected
+01:02:02.856 [Thread-3] INFO  com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Wake Word Detected ......
+01:02:02.857 [Thread-32] INFO  com.amazon.alexa.avs.ui.controllers.ListenViewController - Wake Word was detected
+01:02:02.857 [Thread-32] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_PAUSE_WAKE_WORD_ENGINE to all connected clients
+01:02:02.896 [Thread-32] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "SpeechRecognizer",
+      "name" : "Recognize",
+      "messageId" : "be212029-f7c8-45b6-9795-cfd413dea4ce",
+      "dialogRequestId" : "7fc1b253-a233-4a0c-9617-006d075b5e7f"
+    },
+    "payload" : {
+      "profile" : "NEAR_FIELD",
+      "format" : "AUDIO_L16_RATE_16000_CHANNELS_1"
+    }
+  },
+  "context" : [ {
+    "header" : {
+      "namespace" : "AudioPlayer",
+      "name" : "PlaybackState"
+    },
+    "payload" : {
+      "token" : "",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "IDLE"
+    }
+  }, {
+    "header" : {
+      "namespace" : "SpeechSynthesizer",
+      "name" : "SpeechState"
+    },
+    "payload" : {
+      "token" : "",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "FINISHED"
+    }
+  }, {
+    "header" : {
+      "namespace" : "Alerts",
+      "name" : "AlertsState"
+    },
+    "payload" : {
+      "allAlerts" : [ ],
+      "activeAlerts" : [ ]
+    }
+  }, {
+    "header" : {
+      "namespace" : "Speaker",
+      "name" : "VolumeState"
+    },
+    "payload" : {
+      "volume" : 50,
+      "muted" : false
+    }
+  } ]
+}
+01:02:02.911 [Thread-32] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Speech request started
+01:02:02.912 [Thread-32] DEBUG com.amazon.alexa.avs.AVSAudioPlayer - Interrupting all Alexa output
+01:02:02.913 [RequestThread] INFO  com.amazon.alexa.avs.http.CachingContentProvider - Create new CachingIterator
+01:02:06.716 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.MessageParser - Response metadata: 
+{
+  "directive" : {
+    "header" : {
+      "namespace" : "SpeechRecognizer",
+      "name" : "StopCapture",
+      "messageId" : "2ab86b51-1828-4237-8adc-a13bb72cbf06",
+      "dialogRequestId" : "7fc1b253-a233-4a0c-9617-006d075b5e7f"
+    },
+    "payload" : { }
+  }
+}
+01:02:06.718 [DependentDirectiveThread] INFO  com.amazon.alexa.avs.AVSController - Handling directive: SpeechRecognizer.StopCapture
+01:02:06.719 [DependentDirectiveThread] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Dispatching directive
+01:02:06.719 [DependentDirectiveThread] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Finished listening to user speech
+01:02:06.720 [DependentDirectiveThread] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_RESUME_WAKE_WORD_ENGINE to all connected clients
+01:02:07.075 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 200
+01:02:07.077 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 02363bfffef61422-00000170-0022ad9e-a1d80f706f59b646-8b24b20d-9
+content-type: multipart/related;boundary=------abcde123;start=metadata.1536962912076;type="application/json"
+
+
+01:02:07.152 [RequestThread] INFO  com.amazon.alexa.avs.http.MessageParser - Response metadata: 
+{
+  "directive" : {
+    "header" : {
+      "namespace" : "SpeechSynthesizer",
+      "name" : "Speak",
+      "messageId" : "412aed03-abad-44e4-843a-243c8e15b84d",
+      "dialogRequestId" : "7fc1b253-a233-4a0c-9617-006d075b5e7f"
+    },
+    "payload" : {
+      "url" : "cid:DeviceTTSRendererV4_abc140be-c6c4-48d5-bbbf-0414b6ea1428_64531453",
+      "format" : "AUDIO_MPEG",
+      "token" : "amzn1.as-ct.v1.HomeAutomation#ACRI#DeviceTTSRendererV4_abc140be-c6c4-48d5-bbbf-0414b6ea1428"
+    }
+  }
+}
+01:02:07.289 [DependentDirectiveThread] INFO  com.amazon.alexa.avs.AVSController - Handling directive: SpeechSynthesizer.Speak
+01:02:07.290 [DependentDirectiveThread] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Dispatching directive
+01:02:07.293 [RequestThread] DEBUG com.amazon.alexa.avs.AVSController - Speech processing finished. Dependent queue size: 0
+01:02:07.296 [RequestThread] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Finished processing speech request
+01:02:07.301 [DependentDirectiveThread] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Alexa speech started
+01:02:07.304 [Thread-36] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Started resume audio thread
+01:02:07.343 [DependentDirectiveThread] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "SpeechSynthesizer",
+      "name" : "SpeechStarted",
+      "messageId" : "84fecd2e-e917-4c92-bf6c-409c0c4af089"
+    },
+    "payload" : {
+      "token" : "amzn1.as-ct.v1.HomeAutomation#ACRI#DeviceTTSRendererV4_abc140be-c6c4-48d5-bbbf-0414b6ea1428"
+    }
+  }
+}
+01:02:07.562 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 204
+01:02:07.563 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 02363bfffef61422-00000170-0022ad9e-a1d80f706f59b646-8b24b20d-11
+
+
+01:02:07.564 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
+01:02:10.050 [Thread-37] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "SpeechSynthesizer",
+      "name" : "SpeechFinished",
+      "messageId" : "ba72a599-2030-40e4-a9b5-70c492d9727c"
+    },
+    "payload" : {
+      "token" : "amzn1.as-ct.v1.HomeAutomation#ACRI#DeviceTTSRendererV4_abc140be-c6c4-48d5-bbbf-0414b6ea1428"
+    }
+  }
+}
+01:02:10.051 [Thread-37] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Alexa speech finished
+01:02:10.054 [Thread-36] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Resuming all Alexa output
+01:02:10.054 [Thread-36] DEBUG com.amazon.alexa.avs.AVSAudioPlayer - Resuming all Alexa output
+01:02:10.239 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 204
+01:02:10.240 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 02363bfffef61422-00000170-0022ad9e-a1d80f706f59b646-8b24b20d-13
+
+
+01:02:10.240 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
+01:02:15.216 [Thread-3] INFO  com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Received wake word detected
+01:02:15.217 [Thread-3] INFO  com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Wake Word Detected ......
+01:02:15.218 [Thread-39] INFO  com.amazon.alexa.avs.ui.controllers.ListenViewController - Wake Word was detected
+01:02:15.219 [Thread-39] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_PAUSE_WAKE_WORD_ENGINE to all connected clients
+01:02:15.234 [Thread-39] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "SpeechRecognizer",
+      "name" : "Recognize",
+      "messageId" : "af87249c-0b35-463e-8ff0-e135483e93e9",
+      "dialogRequestId" : "c25a7a38-d89b-43d0-b15a-7094a67e9751"
+    },
+    "payload" : {
+      "profile" : "NEAR_FIELD",
+      "format" : "AUDIO_L16_RATE_16000_CHANNELS_1"
+    }
+  },
+  "context" : [ {
+    "header" : {
+      "namespace" : "AudioPlayer",
+      "name" : "PlaybackState"
+    },
+    "payload" : {
+      "token" : "",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "IDLE"
+    }
+  }, {
+    "header" : {
+      "namespace" : "SpeechSynthesizer",
+      "name" : "SpeechState"
+    },
+    "payload" : {
+      "token" : "amzn1.as-ct.v1.HomeAutomation#ACRI#DeviceTTSRendererV4_abc140be-c6c4-48d5-bbbf-0414b6ea1428",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "FINISHED"
+    }
+  }, {
+    "header" : {
+      "namespace" : "Alerts",
+      "name" : "AlertsState"
+    },
+    "payload" : {
+      "allAlerts" : [ ],
+      "activeAlerts" : [ ]
+    }
+  }, {
+    "header" : {
+      "namespace" : "Speaker",
+      "name" : "VolumeState"
+    },
+    "payload" : {
+      "volume" : 50,
+      "muted" : false
+    }
+  } ]
+}
+01:02:15.238 [Thread-39] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Speech request started
+01:02:15.239 [Thread-39] DEBUG com.amazon.alexa.avs.AVSAudioPlayer - Interrupting all Alexa output
+01:02:15.240 [RequestThread] INFO  com.amazon.alexa.avs.http.CachingContentProvider - Create new CachingIterator
+01:02:18.982 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.MessageParser - Response metadata: 
+{
+  "directive" : {
+    "header" : {
+      "namespace" : "SpeechRecognizer",
+      "name" : "StopCapture",
+      "messageId" : "5bdef8b5-bd8f-46d3-8c5e-1ca54b2bf45b",
+      "dialogRequestId" : "c25a7a38-d89b-43d0-b15a-7094a67e9751"
+    },
+    "payload" : { }
+  }
+}
+01:02:18.986 [DependentDirectiveThread] INFO  com.amazon.alexa.avs.AVSController - Handling directive: SpeechRecognizer.StopCapture
+01:02:18.987 [DependentDirectiveThread] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Dispatching directive
+01:02:18.987 [DependentDirectiveThread] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Finished listening to user speech
+01:02:18.988 [DependentDirectiveThread] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_RESUME_WAKE_WORD_ENGINE to all connected clients
+01:02:26.849 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 200
+01:02:26.850 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 02363bfffef61422-00000170-0022ad9e-a1d80f706f59b646-8b24b20d-15
+content-type: multipart/related;boundary=------abcde123;start=metadata.1536755988842;type="application/json"
+
+
+01:02:26.902 [RequestThread] INFO  com.amazon.alexa.avs.http.MessageParser - Response metadata: 
+{
+  "directive" : {
+    "header" : {
+      "namespace" : "SpeechSynthesizer",
+      "name" : "Speak",
+      "messageId" : "331af6ba-8b80-4c95-9dde-e4c86bc43d37",
+      "dialogRequestId" : "c25a7a38-d89b-43d0-b15a-7094a67e9751"
+    },
+    "payload" : {
+      "url" : "cid:Terminal_amzn1.ask.skill.283e710e-8dd0-486e-8c87-7cf56e489f72_f0c7369e-104f-42fc-9fae-b1af45a6cba2_141742308",
+      "format" : "AUDIO_MPEG",
+      "token" : "amzn1.as-ct.v1.ThirdPartySdkSpeechlet#ACRI#Terminal_amzn1.ask.skill.283e710e-8dd0-486e-8c87-7cf56e489f72_f0c7369e-104f-42fc-9fae-b1af45a6cba2"
+    }
+  }
+}
+01:02:26.955 [DependentDirectiveThread] INFO  com.amazon.alexa.avs.AVSController - Handling directive: SpeechSynthesizer.Speak
+01:02:26.956 [RequestThread] DEBUG com.amazon.alexa.avs.AVSController - Speech processing finished. Dependent queue size: 0
+01:02:26.956 [RequestThread] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Finished processing speech request
+01:02:26.956 [DependentDirectiveThread] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Dispatching directive
+01:02:26.957 [DependentDirectiveThread] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Alexa speech started
+01:02:26.959 [DependentDirectiveThread] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "SpeechSynthesizer",
+      "name" : "SpeechStarted",
+      "messageId" : "51746485-a089-4461-a16c-3e5ea7d7a7b3"
+    },
+    "payload" : {
+      "token" : "amzn1.as-ct.v1.ThirdPartySdkSpeechlet#ACRI#Terminal_amzn1.ask.skill.283e710e-8dd0-486e-8c87-7cf56e489f72_f0c7369e-104f-42fc-9fae-b1af45a6cba2"
+    }
+  }
+}
+01:02:26.961 [Thread-43] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Started resume audio thread
+01:02:27.113 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 204
+01:02:27.114 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 02363bfffef61422-00000170-0022ad9e-a1d80f706f59b646-8b24b20d-17
+
+
+01:02:27.115 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
+01:02:30.887 [Thread-44] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "SpeechSynthesizer",
+      "name" : "SpeechFinished",
+      "messageId" : "8301121e-0a73-4a15-a2ea-de71ec9cdc35"
+    },
+    "payload" : {
+      "token" : "amzn1.as-ct.v1.ThirdPartySdkSpeechlet#ACRI#Terminal_amzn1.ask.skill.283e710e-8dd0-486e-8c87-7cf56e489f72_f0c7369e-104f-42fc-9fae-b1af45a6cba2"
+    }
+  }
+}
+01:02:30.889 [Thread-44] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Alexa speech finished
+01:02:30.890 [Thread-43] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Resuming all Alexa output
+01:02:30.891 [Thread-43] DEBUG com.amazon.alexa.avs.AVSAudioPlayer - Resuming all Alexa output
+01:02:31.039 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 204
+01:02:31.040 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 02363bfffef61422-00000170-0022ad9e-a1d80f706f59b646-8b24b20d-19
+
+
+01:02:31.041 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
+01:03:09.918 [Thread-13] INFO  com.amazon.alexa.avs.http.AVSClient - HttpClient stopping
+01:03:45.016 [main] INFO  com.amazon.alexa.avs.AVSController - Creating Wake Word IPC | port number: 5123
+01:03:46.073 [main] INFO  com.amazon.alexa.avs.AVSController - Created Wake Word IPC ok.
+01:03:46.091 [main] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_PAUSE_WAKE_WORD_ENGINE to all connected clients
+01:03:46.366 [main] WARN  com.amazon.alexa.avs.AVSController - Could not open microphone line
+01:03:46.367 [main] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_RESUME_WAKE_WORD_ENGINE to all connected clients
+01:03:46.443 [main] WARN  com.amazon.alexa.avs.AVSController - Could not open the microphone line.
+01:03:47.045 [Thread-1] INFO  com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - New IPC client was accepted, current of current clients is 1
+01:03:52.853 [main] INFO  com.amazon.alexa.avs.http.AVSClient - HttpClient starting
+01:03:55.383 [main] INFO  com.amazon.alexa.avs.http.AVSClient - HttpClient started
+01:03:58.050 [pool-7-thread-1] DEBUG com.amazon.alexa.avs.NotificationManager - Loaded notification indicator state from disk
+01:04:00.904 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Establishing downchannel
+01:04:02.865 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 200
+01:04:02.866 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 0a69fcfffe66dc0a-00002398-00231b4a-a16bd039ed064f6a-802a1e1a-1
+content-type: multipart/related; boundary=------abcde123; type=application/json
+
+
+01:04:02.870 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.AVSController - Start sending SynchronizeStateEvent
+01:04:06.163 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "System",
+      "name" : "SynchronizeState",
+      "messageId" : "1408968e-5df5-4b05-9b3b-39d88fcc5a5a"
+    },
+    "payload" : { }
+  },
+  "context" : [ {
+    "header" : {
+      "namespace" : "AudioPlayer",
+      "name" : "PlaybackState"
+    },
+    "payload" : {
+      "token" : "",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "IDLE"
+    }
+  }, {
+    "header" : {
+      "namespace" : "SpeechSynthesizer",
+      "name" : "SpeechState"
+    },
+    "payload" : {
+      "token" : "",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "FINISHED"
+    }
+  }, {
+    "header" : {
+      "namespace" : "Alerts",
+      "name" : "AlertsState"
+    },
+    "payload" : {
+      "allAlerts" : [ ],
+      "activeAlerts" : [ ]
+    }
+  }, {
+    "header" : {
+      "namespace" : "Speaker",
+      "name" : "VolumeState"
+    },
+    "payload" : {
+      "volume" : 50,
+      "muted" : false
+    }
+  }, {
+    "header" : {
+      "namespace" : "Notifications",
+      "name" : "IndicatorState"
+    },
+    "payload" : {
+      "isEnabled" : false,
+      "isVisualIndicatorPersisted" : false
+    }
+  } ]
+}
+01:04:06.248 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "Settings",
+      "name" : "SettingsUpdated",
+      "messageId" : "8805a268-bcbd-4608-88e1-a3de51e635e0"
+    },
+    "payload" : {
+      "settings" : [ {
+        "key" : "locale",
+        "value" : "en-US"
+      } ]
+    }
+  }
+}
+01:04:06.528 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 204
+01:04:06.529 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 0a69fcfffe66dc0a-00002398-00231b4a-a16bd039ed064f6a-802a1e1a-3
+
+
+01:04:06.532 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
+01:04:06.773 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 204
+01:04:06.774 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 0a69fcfffe66dc0a-00002398-00231b4a-a16bd039ed064f6a-802a1e1a-5
+
+
+01:04:06.774 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
+01:04:29.394 [Thread-3] INFO  com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Received wake word detected
+01:04:29.397 [Thread-3] INFO  com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Wake Word Detected ......
+01:04:29.402 [Thread-27] INFO  com.amazon.alexa.avs.ui.controllers.ListenViewController - Wake Word was detected
+01:04:29.403 [Thread-27] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_PAUSE_WAKE_WORD_ENGINE to all connected clients
+01:04:29.432 [Thread-27] ERROR com.amazon.alexa.avs.ui.controllers.ListenViewController - An error occured creating speech request
+java.lang.NullPointerException
+	at com.amazon.alexa.avs.AVSController.getMicrophoneInputStream(AVSController.java:350) ~[classes/:?]
+	at com.amazon.alexa.avs.AVSController.startRecording(AVSController.java:327) [classes/:?]
+	at com.amazon.alexa.avs.ui.controllers.ListenViewController.listenButtonPressed(ListenViewController.java:55) [classes/:?]
+	at com.amazon.alexa.avs.ui.controllers.ListenViewController.onWakeWordDetected(ListenViewController.java:156) [classes/:?]
+	at com.amazon.alexa.avs.ui.graphical.GraphicalListenView.onWakeWordDetected(GraphicalListenView.java:116) [classes/:?]
+	at com.amazon.alexa.avs.AVSController.onWakeWordDetected(AVSController.java:758) [classes/:?]
+	at com.amazon.alexa.avs.wakeword.WakeWordIPC.wakeWordDetected(WakeWordIPC.java:43) [classes/:?]
+	at com.amazon.alexa.avs.wakeword.WakeWordIPCSocket$1.run(WakeWordIPCSocket.java:84) [classes/:?]
+01:04:29.474 [Thread-27] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Finished listening to user speech
+01:04:29.478 [Thread-27] DEBUG com.amazon.alexa.avs.AVSAudioPlayer - Resuming all Alexa output
+01:04:42.755 [AWT-EventQueue-0] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Finished listening to user speech
+01:04:42.756 [AWT-EventQueue-0] DEBUG com.amazon.alexa.avs.AVSAudioPlayer - Resuming all Alexa output
+01:04:43.882 [AWT-EventQueue-0] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Finished listening to user speech
+01:04:43.883 [AWT-EventQueue-0] DEBUG com.amazon.alexa.avs.AVSAudioPlayer - Resuming all Alexa output
+01:04:45.693 [AWT-EventQueue-0] DEBUG com.amazon.alexa.avs.SpeechRequestAudioPlayerPauseController - Finished listening to user speech
+01:04:45.694 [AWT-EventQueue-0] DEBUG com.amazon.alexa.avs.AVSAudioPlayer - Resuming all Alexa output
+01:05:23.643 [main] INFO  com.amazon.alexa.avs.AVSController - Creating Wake Word IPC | port number: 5123
+01:05:24.422 [Thread-1] INFO  com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - New IPC client was accepted, current of current clients is 1
+01:05:24.668 [main] INFO  com.amazon.alexa.avs.AVSController - Created Wake Word IPC ok.
+01:05:24.680 [main] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_PAUSE_WAKE_WORD_ENGINE to all connected clients
+01:05:24.889 [main] DEBUG com.amazon.alexa.avs.wakeword.WakeWordIPCSocket - Sending command IPC_RESUME_WAKE_WORD_ENGINE to all connected clients
+01:05:28.681 [main] INFO  com.amazon.alexa.avs.http.AVSClient - HttpClient starting
+01:05:30.700 [main] INFO  com.amazon.alexa.avs.http.AVSClient - HttpClient started
+01:05:32.791 [pool-7-thread-1] DEBUG com.amazon.alexa.avs.NotificationManager - Loaded notification indicator state from disk
+01:05:35.188 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Establishing downchannel
+01:05:36.977 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 200
+01:05:36.979 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 0e1bd5fffe60854c-00003f69-0020dd0b-142215655d7cdf4a-a41c5db5-1
+content-type: multipart/related; boundary=------abcde123; type=application/json
+
+
+01:05:36.983 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.AVSController - Start sending SynchronizeStateEvent
+01:05:38.925 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "System",
+      "name" : "SynchronizeState",
+      "messageId" : "67ff5a3c-78c4-4bfa-9df7-a04f6564a353"
+    },
+    "payload" : { }
+  },
+  "context" : [ {
+    "header" : {
+      "namespace" : "AudioPlayer",
+      "name" : "PlaybackState"
+    },
+    "payload" : {
+      "token" : "",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "IDLE"
+    }
+  }, {
+    "header" : {
+      "namespace" : "SpeechSynthesizer",
+      "name" : "SpeechState"
+    },
+    "payload" : {
+      "token" : "",
+      "offsetInMilliseconds" : 0,
+      "playerActivity" : "FINISHED"
+    }
+  }, {
+    "header" : {
+      "namespace" : "Alerts",
+      "name" : "AlertsState"
+    },
+    "payload" : {
+      "allAlerts" : [ ],
+      "activeAlerts" : [ ]
+    }
+  }, {
+    "header" : {
+      "namespace" : "Speaker",
+      "name" : "VolumeState"
+    },
+    "payload" : {
+      "volume" : 50,
+      "muted" : false
+    }
+  }, {
+    "header" : {
+      "namespace" : "Notifications",
+      "name" : "IndicatorState"
+    },
+    "payload" : {
+      "isEnabled" : false,
+      "isVisualIndicatorPersisted" : false
+    }
+  } ]
+}
+01:05:38.990 [DownchannelRequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Request metadata: 
+{
+  "event" : {
+    "header" : {
+      "namespace" : "Settings",
+      "name" : "SettingsUpdated",
+      "messageId" : "5db04f47-80cd-44ea-b81d-107eae42588c"
+    },
+    "payload" : {
+      "settings" : [ {
+        "key" : "locale",
+        "value" : "en-US"
+      } ]
+    }
+  }
+}
+01:05:39.279 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 204
+01:05:39.280 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 0e1bd5fffe60854c-00003f69-0020dd0b-142215655d7cdf4a-a41c5db5-3
+
+
+01:05:39.283 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
+01:05:39.470 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response code: 204
+01:05:39.471 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - Response headers: access-control-allow-origin: *
+x-amzn-requestid: 0e1bd5fffe60854c-00003f69-0020dd0b-142215655d7cdf4a-a41c5db5-5
+
+
+01:05:39.472 [RequestThread] INFO  com.amazon.alexa.avs.http.AVSClient - This response successfully had no content.
+01:05:51.219 [Thread-13] INFO  com.amazon.alexa.avs.http.AVSClient - HttpClient stopping

@@ -90,7 +90,7 @@ def doorUnlock():
 		return statement("The door is already open!")
 
 	if (len(set(face_search()).intersection(authorized)) > 0): 
-		arduinoSerial.write(b'o')
+		#arduinoSerial.write(b'o')
 		isDoorOpen = 1
 		send_sms("Your door was unlocked by " + set(face_search()).intersection(authorized)[0])
 		payload = payload = { "Status": "Unlocked!" }
@@ -101,7 +101,7 @@ def doorUnlock():
 	payload = payload = { "Status": "Attempted Unlock!" }
 	client.publish("iot-2/evt/test/fmt/json", json.dumps(payload))
 	client.loop()
-	make_call()
+	#make_call()
 	return statement("Sorry, your face is not recognized. Please stay away.")
 
 @ask.intent("lockDoor") 
