@@ -3,7 +3,7 @@
     "dsn":"123456789",
     "provisioningMethod":"companionService",
     "wakeWordAgentEnabled":true,
-    "headless":false,
+    "headless":true,
     "locale":"en-US",
     "avsHost":"https://avs-alexa-na.amazon.com",
     "companionApp":{

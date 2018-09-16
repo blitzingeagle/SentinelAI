@@ -1,3 +1,4 @@
+
 from flask import Flask 
 from flask_ask import Ask,  request, session, statement, question
 from random import randint
@@ -9,15 +10,13 @@ import time
 import paho.mqtt.client as mqtt
 from face_recog.facerec_from_webcam import face_search
 from TwilioSender import send_sms, make_call
+#from walabot import WalabotFace
 
-#arduinoSerial = serial.Serial("/dev/ttyACM0", 9600, timeout=1)
+arduinoSerial = serial.Serial("/dev/ttyACM0", 9600, timeout=1)
 app = Flask(__name__) 
 ask = Ask(app, '/')
 
-client = mqtt.Client("d:6uzx59:RPi:hackthenorth")
-client.username_pw_set("use-token-auth", "hackthenorth")
-client.connect("6uzx59.messaging.internetofthings.ibmcloud.com", 1883, 500)
-
+#wlbt = WalabotFace()	
 isDoorOpen = 0
 authorized = []
 
@@ -28,10 +27,16 @@ def on_message(mqttc, obj, msg):
 	global authorized
 	print(msg.topic + " " + str(msg.qos) + " " + str(msg.payload))
 	if json.loads(msg.payload.decode("utf-8"))["delete"] == "true":
-	    authorized.remove(json.loads(msg.payload.decode("utf-8"))["name"])
-	else:
-	    authorized.append(json.loads(msg.payload.decode("utf-8"))["name"])
+		authorized.remove(json.loads(msg.payload.decode("utf-8"))["name"])
+	else:    
+		authorized.append(json.loads(msg.payload.decode("utf-8"))["name"])
 	
+client = mqtt.Client("d:6uzx59:RPi:hackthenorth")
+client.username_pw_set("use-token-auth", "hackthenorth")
+client.connect("6uzx59.messaging.internetofthings.ibmcloud.com", 1883, 500)
+client.subscribe("iot-2/cmd/+/fmt/String", qos=0)
+client.on_subscribe = on_subscribe
+client.on_message = on_message
 
 #start of Alexa handler
 @ask.launch
@@ -40,11 +45,9 @@ def launch():
 
 @ask.intent("getUpdate") 
 def getUpdate():
-	client.subscribe("iot-2/cmd/+/fmt/String", qos=0)
-	client.on_subscribe = on_subscribe
-	client.on_message = on_message
 	client.loop()
-	
+	time.sleep(1)
+	client.loop()
 	return question("The sentinel settings have been updated") 
 
 @ask.intent("whereRBC", mapping={'city': 'city'}) 
@@ -88,20 +91,23 @@ def doorUnlock():
 	global isDoorOpen
 	if (isDoorOpen == 1):
 		return statement("The door is already open!")
-
-	if (len(set(face_search()).intersection(authorized)) > 0): 
-		#arduinoSerial.write(b'o')
-		isDoorOpen = 1
-		send_sms("Your door was unlocked by " + set(face_search()).intersection(authorized)[0])
-		payload = payload = { "Status": "Unlocked!" }
-		client.publish("iot-2/evt/test/fmt/json", json.dumps(payload))
-		client.loop()
-		return statement("The door has been unlocked and opened")
 	
+	result = set(face_search()).intersection(set(authorized))
+	if (len(result) > 0): 
+                ### Walabot
+                #if (wlbt.recognize()):
+                        arduinoSerial.write(b'o')
+                        isDoorOpen = 1
+                        send_sms("Your door was unlocked by %s" % result)
+                        payload = payload = { "Status": "Unlocked!" }
+                        client.publish("iot-2/evt/test/fmt/json", json.dumps(payload))
+                        client.loop()
+                        return statement("The door has been unlocked and opened")
+            
 	payload = payload = { "Status": "Attempted Unlock!" }
 	client.publish("iot-2/evt/test/fmt/json", json.dumps(payload))
 	client.loop()
-	#make_call()
+	make_call()
 	return statement("Sorry, your face is not recognized. Please stay away.")
 
 @ask.intent("lockDoor") 
@@ -109,11 +115,11 @@ def doorLock():
 	global isDoorOpen
 	if (isDoorOpen == 1):
 		isDoorOpen = 0
-		
+		arduinoSerial.write(b'c')
 		payload = payload = { "Status": "Locked!" }
 		client.publish("iot-2/evt/test/fmt/json", json.dumps(payload))
 		client.loop()
-	
+	send_sms("Your door was locked.")
 	return statement("Door has been locked")
 
 if __name__ == "__main__":
