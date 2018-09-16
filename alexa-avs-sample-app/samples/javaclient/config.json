@@ -1,0 +1,22 @@
+{
+    "productId":"SentinelAI",
+    "dsn":"123456789",
+    "provisioningMethod":"companionService",
+    "wakeWordAgentEnabled":true,
+    "headless":false,
+    "locale":"en-US",
+    "avsHost":"https://avs-alexa-na.amazon.com",
+    "companionApp":{
+        "localPort":8443,
+        "lwaUrl":"https://api.amazon.com",
+        "sslKeyStore":"/home/pi/Desktop/SentinelAI/alexa-avs-sample-app/samples/javaclient/certs/server/jetty.pkcs12",
+        "sslKeyStorePassphrase":""
+    },
+    "companionService":{
+        "serviceUrl":"https://localhost:3000",
+        "sslClientKeyStore":"/home/pi/Desktop/SentinelAI/alexa-avs-sample-app/samples/javaclient/certs/client/client.pkcs12",
+        "sslClientKeyStorePassphrase":"",
+        "sslCaCert":"/home/pi/Desktop/SentinelAI/alexa-avs-sample-app/samples/javaclient/certs/ca/ca.crt",
+        "sessionId":"5788f642-6810-4b22-a7d9-3cace55bac16"
+    }
+}

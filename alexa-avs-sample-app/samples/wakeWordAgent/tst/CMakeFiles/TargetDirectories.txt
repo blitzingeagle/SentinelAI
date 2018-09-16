@@ -1,0 +1,3 @@
+/home/pi/Desktop/SentinelAI/alexa-avs-sample-app/samples/wakeWordAgent/tst/CMakeFiles/rebuild_cache.dir
+/home/pi/Desktop/SentinelAI/alexa-avs-sample-app/samples/wakeWordAgent/tst/CMakeFiles/edit_cache.dir
+/home/pi/Desktop/SentinelAI/alexa-avs-sample-app/samples/wakeWordAgent/tst/CMakeFiles/wakeWordAgentTest.dir
