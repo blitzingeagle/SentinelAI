@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "SentinelAI",
+    "description": "The SentielAI that works in parallel with the SentielAI door security system.",
+    "slug": "SentinelAI",
+    "privacy": "public",
+    "sdkVersion": "30.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/images/sentinelAI.png",
+    "splash": {
+      "image": "./assets/images/sentinelAI.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    }
+  }
+}

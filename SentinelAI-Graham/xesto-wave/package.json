@@ -1,0 +1,18 @@
+{
+  "name": "xesto-wave",
+  "version": "1.0.0",
+  "description": "javascript for leapmotion motion detection",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/webpack-cli/bin/webpack.js --config webpack.conf.js",
+    "start:dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.conf.js"
+  },
+  "author": "Steve Kim",
+  "license": "ISC",
+  "dependencies": {
+    "leapjs": "0.6.4",
+    "webpack-dev-server": "^3.1.8",
+    "xesto-wave-npm": "0.0.121"
+  }
+}

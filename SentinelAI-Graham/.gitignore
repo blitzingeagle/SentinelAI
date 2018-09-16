@@ -1,0 +1,10 @@
+# pycharm
+.idea/
+.idea
+<<<<<<< HEAD
+
+# expo
+.expo/
+=======
+venv/
+>>>>>>> 06ed16ad11993c4ec49d7fdf8465e52ad8544773
